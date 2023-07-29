@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const POST = mongoose.model("POST");
-const USER = mongoose.model("USER");
+const POST = require("../models/post");
+const USER = require("../models/user");
 
 // Controller to create a new post
 const createPost = (req, res) => {

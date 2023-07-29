@@ -8,7 +8,7 @@ dotenv.config();
 const Jwt_secret = process.env.JWT_SECRET;
 
 // Import the USER model
-const USER = mongoose.model("USER");
+const USER = require("../models/user")
 
 // Controller for user signup
 const signup = (req, res) => {

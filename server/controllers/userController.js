@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const USER = mongoose.model("USER");
+const USER = require("../models/user");
 
 // Controller to get user profile
 const getUserProfile = (req, res) => {

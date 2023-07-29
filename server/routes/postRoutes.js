@@ -5,7 +5,7 @@ const router = express.Router();
 const postController = require("../controllers/postController");
 
 // Route to create a new post
-router.post("/createPost", requireLogin, postController.createPost);
+router.post("/createPost", postController.createPost);
 
 // Route to get all posts from the database
 router.get("/allposts", postController.getAllPosts);
@@ -14,27 +14,27 @@ router.get("/allposts", postController.getAllPosts);
 router.get("/allposts/:postId", postController.getPostById);
 
 // Route to get all posts created by a specific user
-router.get("/myposts", requireLogin, postController.getMyPosts);
+router.get("/myposts", postController.getMyPosts);
 
 // Route to get posts by categories
 router.get("/posts", postController.getPostsByCategories);
 
 // Route to like a post
-router.put("/like", requireLogin, postController.likePost);
+router.put("/like", postController.likePost);
 
 // Route to unlike a post
-router.put("/unlike", requireLogin, postController.unlikePost);
+router.put("/unlike", postController.unlikePost);
 
 // Route to add a comment to a post
-router.put("/comment", requireLogin, postController.addCommentToPost);
+router.put("/comment", postController.addCommentToPost);
 
 // Route to delete a post
-router.delete("/deletePost/:postId", requireLogin, postController.deletePost);
+router.delete("/deletePost/:postId", postController.deletePost);
 
 // Route to request a project work
-router.put("/request", requireLogin, postController.requestProjectWork);
+router.put("/request", postController.requestProjectWork);
 
-// Route to unrequest a project work
-router.put("/unrequest", requireLogin, postController.unrequestProjectWork);
+// // Route to unrequest a project work
+// router.put("/unrequest", postController.unrequestProjectWork);
 
 module.exports = router;

@@ -30,7 +30,7 @@ const userSchema = new mongoose.Schema({
     },
     posts: [{
         type: ObjectId,
-        ref: "POST"
+        ref: "post"
     }],
     Portfolio: {
         type: String
@@ -50,4 +50,4 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-mongoose.model("USER", userSchema)
+module.exports = mongoose.model("user", userSchema);

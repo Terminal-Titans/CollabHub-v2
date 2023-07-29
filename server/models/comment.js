@@ -5,12 +5,12 @@ const commentSchema = new mongoose.Schema(
   {
     user: {
       type: ObjectId,
-      ref: "USER",
+      ref: "user",
       // required: true,
     },
     post: {
       type: ObjectId,
-      ref: "POST",
+      ref: "post",
       // required: true,
     },
     text: {
@@ -21,7 +21,7 @@ const commentSchema = new mongoose.Schema(
       {
         user: {
           type: ObjectId,
-          ref: "USER",
+          ref: "user",
           // required: true,
         },
         text: {
@@ -34,4 +34,4 @@ const commentSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("COMMENT", commentSchema);
+module.exports = mongoose.model("comment", commentSchema);

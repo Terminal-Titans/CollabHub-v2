@@ -8,15 +8,15 @@ const userController = require("../controllers/userController");
 router.get("/user/:id", userController.getUserProfile);
 
 // Route to follow user
-router.put("/follow", requireLogin, userController.followUser);
+router.put("/follow", userController.followUser);
 
 // Route to unfollow user
-router.put("/unfollow", requireLogin, userController.unfollowUser);
+router.put("/unfollow", userController.unfollowUser);
 
 // Route to upload profile pic
-router.put("/uploadProfilePic", requireLogin, userController.uploadProfilePic);
+router.put("/uploadProfilePic", userController.uploadProfilePic);
 
 // Route to update user information
-router.put("/users/update", requireLogin, userController.updateUser);
+router.put("/users/update", userController.updateUser);
 
 module.exports = router;

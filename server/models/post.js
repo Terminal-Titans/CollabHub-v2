@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const moment = require("moment");
 const { ObjectId } = mongoose.Schema.Types;
 
 const postSchema = new mongoose.Schema(
@@ -19,12 +18,12 @@ const postSchema = new mongoose.Schema(
     comments: [
       {
         comment: { type: String },
-        postedBy: { type: ObjectId, ref: "USER" },
+        postedBy: { type: ObjectId, ref: "user" },
       },
     ],
     postedBy: {
       type: ObjectId,
-      ref: "USER",
+      ref: "user",
     },
     categories: [
       {
@@ -49,16 +48,20 @@ const postSchema = new mongoose.Schema(
       // required: true,
       default: 0,
     },
-    likes: [{
-      type: ObjectId,
-      ref: "USER"
-    }],
-    request: [{
-      type: ObjectId,
-      ref: "USER"
-    }]
+    likes: [
+      {
+        type: ObjectId,
+        ref: "user",
+      },
+    ],
+    request: [
+      {
+        type: ObjectId,
+        ref: "user",
+      },
+    ],
   },
   { timestamps: true }
 );
 
-mongoose.model("POST", postSchema);
+module.exports = mongoose.model("post", postSchema);
