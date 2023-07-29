@@ -1,0 +1,38 @@
+.text-transition {
+    width: 300px;
+    font-size: 24px;
+    position: relative;
+  }
+  
+  .text-transition span {
+    position: absolute;
+    opacity: 0;
+    animation: text-animation 8s linear infinite;
+  }
+  
+  .text-transition span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .text-transition span:nth-child(2) {
+    animation-delay: 4s;
+  }
+  
+  @keyframes text-animation {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
