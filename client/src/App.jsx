@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import CreatePost from "./pages/CreatePost";
 import Posts from "./pages/Posts";
+import Profile from "./pages/Profile/Profile";
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
                 <Route exact path="/" element={<Home />}></Route>
                 <Route exact path='/create-post' element={< CreatePost />}></Route>  
                 <Route exact path='/posts' element={< Posts />}></Route>  
+                <Route exact path='/profile' element={< Profile />}></Route>    
                 {/* <Route exact path='/about' element={< About />}></Route>  
                  <Route exact path='/contact' element={< Contact />}></Route>   */}
               </Routes>
