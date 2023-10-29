@@ -1,0 +1,9 @@
+.feed{
+    flex: 5.5;
+    height: calc(100vh);
+    margin-top: 50px;
+    /* align-self: center; */
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+}
